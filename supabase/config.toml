@@ -1,0 +1,13 @@
+project_id = "ctkysanjvedwigrscxqj"
+
+[functions.create-application-payment]
+verify_jwt = false
+
+[functions.verify-application-payment]
+verify_jwt = false
+
+[functions.send-confirmation-email]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
