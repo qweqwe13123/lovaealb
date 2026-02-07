@@ -4,11 +4,11 @@ import downtownImage from "@/assets/neighborhood-downtown.jpg";
 import parkImage from "@/assets/neighborhood-park.jpg";
 
 const nearbyPlaces = [
-  { icon: Coffee, name: "Local Coffee Shops", distance: "2 min walk", description: "Multiple artisan coffee roasters nearby" },
-  { icon: Utensils, name: "Restaurants & Dining", distance: "5 min walk", description: "Diverse cuisine options from casual to fine dining" },
-  { icon: ShoppingBag, name: "Shopping Centers", distance: "10 min walk", description: "Boutiques, groceries, and major retailers" },
-  { icon: TreePine, name: "Parks & Recreation", distance: "8 min walk", description: "Green spaces and hiking trails" },
-  { icon: Train, name: "Public Transit", distance: "3 min walk", description: "MAX Light Rail and bus stops nearby" },
+  { icon: Coffee, name: "Local Coffee Shops", description: "Multiple artisan coffee roasters nearby" },
+  { icon: Utensils, name: "Restaurants & Dining", description: "Diverse cuisine options from casual to fine dining" },
+  { icon: ShoppingBag, name: "Shopping Centers", description: "Boutiques, groceries, and major retailers" },
+  { icon: TreePine, name: "Parks & Recreation", description: "Green spaces and hiking trails" },
+  { icon: Train, name: "Public Transit", description: "MAX Light Rail and bus stops nearby" },
 ];
 
 const Neighborhood = () => {
@@ -63,7 +63,6 @@ const Neighborhood = () => {
                   </div>
                   <div>
                     <h3 className="font-display font-semibold text-lg">{place.name}</h3>
-                    <p className="text-sm text-primary font-medium">{place.distance}</p>
                     <p className="text-sm text-muted-foreground mt-1">{place.description}</p>
                   </div>
                 </div>

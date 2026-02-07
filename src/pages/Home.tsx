@@ -99,28 +99,28 @@ const Home = () => {
       </section>
 
       {/* Everything You Need Section */}
-      <section className="py-20 bg-greenland-cream">
+      <section className="py-20 bg-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-10 italic">
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-primary-foreground mb-10 italic">
               Everything You Need<br />to Feel at Home
             </h2>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <Bed className="w-7 h-7 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">Studios, 1 & 2 Bedroom Apartments</span>
+                <Bed className="w-7 h-7 text-primary-foreground flex-shrink-0" />
+                <span className="text-lg text-primary-foreground">Studios, 1 & 2 Bedroom Apartments</span>
               </div>
               <div className="flex items-center gap-4">
-                <PawPrint className="w-7 h-7 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">Pet-Friendly Community</span>
+                <PawPrint className="w-7 h-7 text-primary-foreground flex-shrink-0" />
+                <span className="text-lg text-primary-foreground">Pet-Friendly Community</span>
               </div>
               <div className="flex items-center gap-4">
-                <UtensilsCrossed className="w-7 h-7 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">Fully Equipped Kitchens</span>
+                <UtensilsCrossed className="w-7 h-7 text-primary-foreground flex-shrink-0" />
+                <span className="text-lg text-primary-foreground">Fully Equipped Kitchens</span>
               </div>
               <div className="flex items-center gap-4">
-                <Sofa className="w-7 h-7 text-primary flex-shrink-0" />
-                <span className="text-lg text-foreground">Comfortable, Modern Interiors</span>
+                <Sofa className="w-7 h-7 text-primary-foreground flex-shrink-0" />
+                <span className="text-lg text-primary-foreground">Comfortable, Modern Interiors</span>
               </div>
             </div>
           </div>
