@@ -15,13 +15,7 @@ import studioNew4 from "@/assets/studio-new-4.jpg";
 import studioNew5 from "@/assets/studio-new-5.jpg";
 import studioNew6 from "@/assets/studio-new-6.jpg";
 import studioNew7 from "@/assets/studio-new-7.jpg";
-import threeBr1 from "@/assets/3br-1.jpg";
-import threeBr2 from "@/assets/3br-2.jpg";
-import threeBr3 from "@/assets/3br-3.jpg";
-import threeBr4 from "@/assets/3br-4.jpg";
-import threeBr5 from "@/assets/3br-5.jpg";
-import threeBr6 from "@/assets/3br-6.jpg";
-import threeBrVideo from "@/assets/3br-video.mov";
+import threeBrFloorPlan from "@/assets/3bed-floor-plan.jpg";
  import twoBrVideo from "@/assets/2br-video.mov";
  import twoBr1 from "@/assets/2br-1.jpg";
  import twoBr2 from "@/assets/2br-2.jpg";
@@ -54,13 +48,7 @@ const studioMedia = [
 ];
 
 const threeBrMedia = [
-  { type: "video" as const, src: threeBrVideo },
-  { type: "image" as const, src: threeBr1 },
-  { type: "image" as const, src: threeBr2 },
-  { type: "image" as const, src: threeBr3 },
-  { type: "image" as const, src: threeBr4 },
-  { type: "image" as const, src: threeBr5 },
-  { type: "image" as const, src: threeBr6 },
+  { type: "image" as const, src: threeBrFloorPlan },
 ];
 
  const twoBrMedia = [
