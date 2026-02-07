@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/Layout";
 import { useToast } from "@/hooks/use-toast";
@@ -27,6 +27,11 @@ const Apply = () => {
   const [formData, setFormData] = useState<ApplicationFormData>(initialFormData);
 
   const wasCanceled = searchParams.get("canceled") === "true";
+
+  // Scroll to top when step changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [step]);
 
   const handleChange = (field: keyof ApplicationFormData, value: unknown) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -108,13 +113,11 @@ const Apply = () => {
   const nextStep = () => {
     if (validateStep(step)) {
       setStep(step + 1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   const prevStep = () => {
     setStep(step - 1);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleSubmit = async () => {
