@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import heroImage from "@/assets/hero-rooftop.jpg";
-import galleryImage from "@/assets/gallery-rooftop.jpg";
-import petsImage from "@/assets/pets-new.jpg";
+import heroImage from "@/assets/hero-portland.jpg";
+import modernLivingImage from "@/assets/modern-living.png";
+import petFriendlyImage from "@/assets/pet-friendly.jpg";
 
 const Home = () => {
   return (
@@ -13,26 +13,29 @@ const Home = () => {
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt="Luxury rooftop terrace in Portland"
+            alt="Portland cityscape at night"
             className="w-full h-full object-cover"
+            loading="eager"
           />
-          <div className="hero-overlay"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 animate-fade-in tracking-wide">
-            Experience Cozy Living in Oregon
-          </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            At Greenland, residents enjoy a warm and inviting community with beautifully designed apartments, perfect for professionals, students, families, and seniors alike!
-          </p>
-          <Link to="/floor-plans">
-            <Button 
-              className="bg-primary hover:bg-greenland-green-dark text-primary-foreground px-8 py-6 text-lg animate-fade-in"
-              style={{ animationDelay: "0.4s" }}
-            >
-              CHECK AVAILABILITY
-            </Button>
-          </Link>
+        <div className="relative z-10 px-4 w-full max-w-2xl mx-auto">
+          {/* Green Card Container */}
+          <div className="bg-primary rounded-3xl px-8 py-12 md:px-12 md:py-16 text-center shadow-2xl">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6 leading-tight">
+              Experience Cozy Living in Oregon
+            </h1>
+            <p className="text-base md:text-lg text-primary-foreground/90 mb-10 leading-relaxed">
+              At Greenland, residents enjoy a warm and inviting community with beautifully designed apartments, perfect for students, families, and seniors alike!
+            </p>
+            <Link to="/floor-plans">
+              <Button 
+                className="bg-greenland-gold hover:bg-greenland-gold-light text-foreground px-10 py-6 text-lg font-semibold tracking-wide rounded-lg shadow-lg"
+              >
+                CHECK AVAILABILITY
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -55,38 +58,24 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Modern Living Section */}
-      <section className="relative py-32">
-        <div className="absolute inset-0">
-          <img
-            src={galleryImage}
-            alt="Modern living at Greenland"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60"></div>
-        </div>
-        <div className="relative z-10 container mx-auto px-4 text-center text-white">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-12 bg-white/50"></div>
-            <h2 className="text-3xl md:text-5xl font-display font-bold">Modern Living</h2>
-            <div className="h-px w-12 bg-white/50"></div>
-          </div>
-          <p className="max-w-4xl mx-auto text-lg leading-relaxed text-white/90 mb-6">
-            When you choose one of our apartments in Portland, Oregon, you get more than a place to live – you get a place to relax and proudly call home. Whether you select one of our studios, one-, or two-bedroom apartments, your experience will be just as sweet. Each of our apartment homes have been crafted with style and are fully equipped with kitchen appliances and a personal patio or balcony.
-          </p>
-          <p className="max-w-4xl mx-auto text-lg leading-relaxed text-white/90">
-            Designed to create the perfect living environment, our community offers the ambiance that you will be happy to return to every day. With you in mind, we offer community amenities that you will love, including a rooftop terrace, fitness center, and courtyard. Add in our helpful management team, and your apartment living experience becomes complete.
-          </p>
-        </div>
+      {/* Modern Living Section - Full Image Only */}
+      <section className="relative">
+        <img
+          src={modernLivingImage}
+          alt="Modern Living apartments with city views"
+          className="w-full h-auto object-cover"
+          loading="lazy"
+        />
       </section>
 
       {/* Pet Friendly Section */}
       <section className="relative py-32">
         <div className="absolute inset-0">
           <img
-            src={petsImage}
-            alt="Pet friendly community"
+            src={petFriendlyImage}
+            alt="Pet friendly community - cat and dog cuddling"
             className="w-full h-full object-cover object-center"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
