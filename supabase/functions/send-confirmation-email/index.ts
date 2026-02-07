@@ -83,6 +83,9 @@ const handler = async (req: Request): Promise<Response> => {
               <table role="presentation" style="width: 100%; border-collapse: collapse;">
                 <tr>
                   <td align="center">
+                    <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.15); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
+                      <span style="font-size: 32px;">🏠</span>
+                    </div>
                     <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: 0.5px;">
                       Greenland Oregon
                     </h1>
