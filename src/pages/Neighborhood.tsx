@@ -33,7 +33,7 @@ const Neighborhood = () => {
             <div>
               <h2 className="text-3xl font-display font-bold mb-6">Welcome to Portland Living</h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Located in one of Portland's most desirable neighborhoods, Greenland offers easy access to everything the city has to offer. From world-class dining and shopping to beautiful parks and outdoor recreation, your new home puts you at the center of it all.
+                Located in one of Portland's most desirable neighborhoods, Greenland offers easy access to everything the city has to offer. From shopping to beautiful parks and outdoor recreation, your new home puts you at the center of it all.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Portland is known for its unique culture, incredible food scene, and stunning natural beauty. Whether you're exploring the local farmers markets, hiking in Forest Park, or enjoying the city's famous coffee culture, there's always something new to discover.
