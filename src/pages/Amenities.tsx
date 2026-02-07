@@ -17,6 +17,7 @@ import parkingImage from "@/assets/amenity-parking.png";
 import petsImage from "@/assets/amenity-pets.jpg";
 import forestImage from "@/assets/amenity-forest.jpg";
 import poolImage from "@/assets/amenity-pool.jpg";
+import tennisImage from "@/assets/amenity-tennis.jpg";
 import playgroundImage from "@/assets/amenity-playground.png";
 
 const communityAmenities = [
@@ -64,7 +65,7 @@ const ourSpaces = [
     description: "Located within Mt. Scott Park" 
   },
   { 
-    image: playgroundImage, 
+    image: tennisImage, 
     icon: Gamepad2,
     label: "Mt. Scott Park",
     title: "Tennis Court", 
