@@ -53,8 +53,8 @@ serve(async (req) => {
     // Calculate fees (PRODUCTION pricing)
     const adultsCount = applicationData.adultsCount || 1;
     const petsCount = applicationData.petsCount || 0;
-    const adultsFee = adultsCount * 1; // $1 per adult
-    const petsFee = petsCount * 1; // $1 per pet
+    const adultsFee = adultsCount * 49; // $49 per adult
+    const petsFee = petsCount * 30; // $30 per pet
     const totalFee = adultsFee + petsFee;
 
     logStep("PRODUCTION: Fees calculated", { adultsCount, petsCount, totalFee });
@@ -206,7 +206,7 @@ serve(async (req) => {
             name: "Rental Application Fee",
             description: `Application processing fee for ${adultsCount} adult(s)`,
           },
-          unit_amount: 100, // $1.00 in cents
+          unit_amount: 4900, // $49.00 in cents
         },
         quantity: adultsCount,
       },
@@ -220,7 +220,7 @@ serve(async (req) => {
             name: "Pet Application Fee",
             description: `Pet application fee for ${petsCount} pet(s)`,
           },
-          unit_amount: 100, // $1.00 in cents
+          unit_amount: 3000, // $30.00 in cents
         },
         quantity: petsCount,
       });

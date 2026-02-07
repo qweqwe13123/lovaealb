@@ -17,8 +17,8 @@ const ReviewSubmitStep = ({ formData, onChange, onPrev, onSubmit, isLoading }: R
   // Calculate fees
   const adultsCount = 1 + formData.additionalOccupants.length; // Primary applicant + additional occupants
   const petsCount = formData.hasPets ? formData.petsCount : 0;
-  const adultsFee = adultsCount * 1;
-  const petsFee = petsCount * 1;
+  const adultsFee = adultsCount * 49; // $49 per adult
+  const petsFee = petsCount * 30; // $30 per pet
   const totalFee = adultsFee + petsFee;
 
   const allCertificationsChecked = 
