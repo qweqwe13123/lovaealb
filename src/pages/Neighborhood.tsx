@@ -91,15 +91,11 @@ const Neighborhood = () => {
               <ul className="space-y-3">
                 <li className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-primary" />
+                  <span className="text-muted-foreground">Mt. Scott Park - Community park with pool and tennis courts</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <MapPin className="w-5 h-5 text-primary" />
                   <span className="text-muted-foreground">Forest Park - 5,200 acres of urban wilderness</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Waterfront Park - Scenic river walks</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span className="text-muted-foreground">Washington Park - Rose gardens & zoo</span>
                 </li>
               </ul>
             </div>
