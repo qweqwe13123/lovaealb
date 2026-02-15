@@ -9,6 +9,7 @@ import FloorPlans from "./pages/FloorPlans";
 import Amenities from "./pages/Amenities";
 import Neighborhood from "./pages/Neighborhood";
 import Contact from "./pages/Contact";
+import Locations from "./pages/Locations";
 import Apply from "./pages/Apply";
 import ApplicationSuccess from "./pages/ApplicationSuccess";
 import NotFound from "./pages/NotFound";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/amenities" element={<Amenities />} />
           <Route path="/neighborhood" element={<Neighborhood />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/locations" element={<Locations />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/application-success" element={<ApplicationSuccess />} />
           <Route path="/success" element={<ApplicationSuccess />} />
