@@ -1,13 +1,25 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isBrooklyn = location.pathname.startsWith("/locations/brooklyn");
+
+  const basePath = isBrooklyn ? "/locations/brooklyn" : "";
 
   const handleQuickLinkClick = (path: string) => {
-    navigate(path);
+    navigate(basePath + path);
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
+
+  const address = isBrooklyn
+    ? "2 Crown St, Brooklyn, NY 11225, USA"
+    : "5855 SE 72ND AVENUE, Portland, OR 97206";
+
+  const description = isBrooklyn
+    ? "Experience comfortable living in Brooklyn's most welcoming apartment community."
+    : "Experience comfortable living in Portland's most welcoming apartment community.";
 
   return (
     <footer className="bg-primary text-primary-foreground">
@@ -15,7 +27,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo & Description */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-3 mb-4">
+            <Link to={isBrooklyn ? "/locations/brooklyn" : "/"} className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center">
                 <svg viewBox="0 0 24 24" className="w-6 h-6 text-primary" fill="currentColor">
                   <path d="M12 3L2 12h3v9h6v-6h2v6h6v-9h3L12 3z" />
@@ -27,7 +39,7 @@ const Footer = () => {
               </div>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Experience comfortable living in Portland's most welcoming apartment community.
+              {description}
             </p>
           </div>
 
@@ -47,7 +59,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-primary-foreground/80">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span>5855 SE 72ND AVENUE, Portland, OR 97206</span>
+                <span>{address}</span>
               </li>
               <li className="flex items-center gap-3 text-sm text-primary-foreground/80">
                 <Phone className="w-4 h-4 flex-shrink-0" />
