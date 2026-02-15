@@ -11,7 +11,11 @@ import Neighborhood from "./pages/Neighborhood";
 import Contact from "./pages/Contact";
 import Locations from "./pages/Locations";
 import LocationPortland from "./pages/LocationPortland";
-import LocationBrooklyn from "./pages/LocationBrooklyn";
+import BrooklynHome from "./pages/brooklyn/BrooklynHome";
+import BrooklynFloorPlans from "./pages/brooklyn/BrooklynFloorPlans";
+import BrooklynAmenities from "./pages/brooklyn/BrooklynAmenities";
+import BrooklynNeighborhood from "./pages/brooklyn/BrooklynNeighborhood";
+import BrooklynContact from "./pages/brooklyn/BrooklynContact";
 import Apply from "./pages/Apply";
 import ApplicationSuccess from "./pages/ApplicationSuccess";
 import NotFound from "./pages/NotFound";
@@ -33,7 +37,11 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/locations/portland" element={<LocationPortland />} />
-          <Route path="/locations/brooklyn" element={<LocationBrooklyn />} />
+          <Route path="/locations/brooklyn" element={<BrooklynHome />} />
+          <Route path="/locations/brooklyn/floor-plans" element={<BrooklynFloorPlans />} />
+          <Route path="/locations/brooklyn/amenities" element={<BrooklynAmenities />} />
+          <Route path="/locations/brooklyn/neighborhood" element={<BrooklynNeighborhood />} />
+          <Route path="/locations/brooklyn/contact" element={<BrooklynContact />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/application-success" element={<ApplicationSuccess />} />
           <Route path="/success" element={<ApplicationSuccess />} />
