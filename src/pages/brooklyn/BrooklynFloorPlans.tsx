@@ -15,6 +15,13 @@ import studioNew4 from "@/assets/studio-new-4.jpg";
 import studioNew5 from "@/assets/studio-new-5.jpg";
 import studioNew6 from "@/assets/studio-new-6.jpg";
 import studioNew7 from "@/assets/studio-new-7.jpg";
+import bkStudioVideo from "@/assets/bk-studio-video.mp4";
+import bkStudio1 from "@/assets/bk-studio-1.jpg";
+import bkStudio2 from "@/assets/bk-studio-2.jpg";
+import bkStudio3 from "@/assets/bk-studio-3.jpg";
+import bkStudio4 from "@/assets/bk-studio-4.jpg";
+import bkStudio5 from "@/assets/bk-studio-5.jpg";
+import bkStudio6 from "@/assets/bk-studio-6.jpg";
 import threeBrFloorPlan from "@/assets/3bed-floor-plan.jpg";
 import twoBrVideo from "@/assets/2br-video.mov";
 import twoBr1 from "@/assets/2br-1.jpg";
@@ -38,13 +45,13 @@ import oneBr8 from "@/assets/1br-8.jpg";
 import oneBr9 from "@/assets/1br-9.jpg";
 
 const studioMedia = [
-  { type: "video" as const, src: studioNewVideo },
-  { type: "image" as const, src: studioNew2 },
-  { type: "image" as const, src: studioNew3 },
-  { type: "image" as const, src: studioNew4 },
-  { type: "image" as const, src: studioNew5 },
-  { type: "image" as const, src: studioNew6 },
-  { type: "image" as const, src: studioNew7 },
+  { type: "video" as const, src: bkStudioVideo },
+  { type: "image" as const, src: bkStudio1 },
+  { type: "image" as const, src: bkStudio2 },
+  { type: "image" as const, src: bkStudio3 },
+  { type: "image" as const, src: bkStudio4 },
+  { type: "image" as const, src: bkStudio5 },
+  { type: "image" as const, src: bkStudio6 },
 ];
 
 const threeBrMedia = [

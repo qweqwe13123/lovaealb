@@ -7,7 +7,7 @@ const locations = [
     city: "Portland, OR",
     address: "5855 SE 72ND AVENUE, Portland, OR 97206",
     description: "Discover comfortable living in one of Portland's most desirable neighborhoods.",
-    path: "/locations/portland",
+    path: "/",
   },
   {
     city: "Brooklyn, NY",
