@@ -1,21 +1,34 @@
 import { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const navItems = [
-  { label: "Home", path: "/" },
-  { label: "Floor Plans", path: "/floor-plans" },
-  { label: "Amenities", path: "/amenities" },
-  { label: "Neighborhood", path: "/neighborhood" },
-  { label: "Contact", path: "/contact" },
-  { label: "Locations", path: "/locations" },
-];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isBrooklyn = location.pathname.startsWith("/locations/brooklyn");
+
+  // When on Brooklyn pages, nav links point to Brooklyn sub-routes
+  const navItems = isBrooklyn
+    ? [
+        { label: "Home", path: "/locations/brooklyn" },
+        { label: "Floor Plans", path: "/locations/brooklyn/floor-plans" },
+        { label: "Amenities", path: "/locations/brooklyn/amenities" },
+        { label: "Neighborhood", path: "/locations/brooklyn/neighborhood" },
+        { label: "Contact", path: "/locations/brooklyn/contact" },
+        { label: "Locations", path: "/locations" },
+      ]
+    : [
+        { label: "Home", path: "/" },
+        { label: "Floor Plans", path: "/floor-plans" },
+        { label: "Amenities", path: "/amenities" },
+        { label: "Neighborhood", path: "/neighborhood" },
+        { label: "Contact", path: "/contact" },
+        { label: "Locations", path: "/locations" },
+      ];
+
+  const applyPath = isBrooklyn ? "/locations/brooklyn/floor-plans" : "/floor-plans";
 
   return (
     <>
@@ -35,7 +48,7 @@ const Header = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link to={isBrooklyn ? "/locations/brooklyn" : "/"} className="flex items-center gap-3">
             <div className="w-10 h-10 bg-primary-foreground rounded-full flex items-center justify-center">
               <svg viewBox="0 0 24 24" className="w-6 h-6 text-primary" fill="currentColor">
                 <path d="M12 3L2 12h3v9h6v-6h2v6h6v-9h3L12 3z" />
@@ -62,7 +75,7 @@ const Header = () => {
 
           {/* Apply Now Button */}
           <div className="hidden lg:block">
-            <Link to="/floor-plans">
+            <Link to={applyPath}>
               <Button className="bg-[#1e3a5f] text-white hover:bg-[#15293f] border-none">
                 Apply Now
               </Button>
@@ -93,7 +106,7 @@ const Header = () => {
                   {item.label}
                 </Link>
               ))}
-              <Link to="/floor-plans" onClick={() => setIsMenuOpen(false)}>
+              <Link to={applyPath} onClick={() => setIsMenuOpen(false)}>
                 <Button className="bg-[#1e3a5f] text-white hover:bg-[#15293f] border-none w-fit mt-2">
                   Apply Now
                 </Button>
