@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Layout from "@/components/Layout";
-import LocationSubNav from "@/components/LocationSubNav";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -127,7 +126,6 @@ const BrooklynFloorPlans = () => {
   return (
     <>
       <Layout>
-        <LocationSubNav basePath="/locations/brooklyn" cityName="Brooklyn, NY" switchTo={{ label: "Portland, OR", path: "/locations/portland" }} />
 
         <section className="relative py-24 bg-primary">
           <div className="container mx-auto px-4 text-center">

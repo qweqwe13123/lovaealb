@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import LocationSubNav from "@/components/LocationSubNav";
 import {
   Car, Dog, Snowflake, WashingMachine, Home, Warehouse, Wifi, Shield, Trees, Waves, Gamepad2, Baby
 } from "lucide-react";
@@ -37,7 +36,7 @@ const ourSpaces = [
 const BrooklynAmenities = () => {
   return (
     <Layout>
-      <LocationSubNav basePath="/locations/brooklyn" cityName="Brooklyn, NY" switchTo={{ label: "Portland, OR", path: "/locations/portland" }} />
+      
 
       {/* Hero Section */}
       <section className="relative py-32 bg-primary overflow-hidden">

@@ -1,5 +1,4 @@
 import Layout from "@/components/Layout";
-import LocationSubNav from "@/components/LocationSubNav";
 import { MapPin, Coffee, ShoppingBag, Utensils, TreePine, Train } from "lucide-react";
 
 const nearbyPlaces = [
@@ -13,7 +12,7 @@ const nearbyPlaces = [
 const BrooklynNeighborhood = () => {
   return (
     <Layout>
-      <LocationSubNav basePath="/locations/brooklyn" cityName="Brooklyn, NY" switchTo={{ label: "Portland, OR", path: "/locations/portland" }} />
+      
 
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">

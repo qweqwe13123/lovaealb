@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
-import LocationSubNav from "@/components/LocationSubNav";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -26,7 +25,7 @@ const BrooklynContact = () => {
 
   return (
     <Layout>
-      <LocationSubNav basePath="/locations/brooklyn" cityName="Brooklyn, NY" switchTo={{ label: "Portland, OR", path: "/locations/portland" }} />
+      
 
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">

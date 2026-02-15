@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import LocationSubNav from "@/components/LocationSubNav";
 import heroImage from "@/assets/hero-portland.jpg";
 import modernLivingImage from "@/assets/modern-living.png";
 import petFriendlyImage from "@/assets/pet-friendly.jpg";
@@ -10,11 +9,6 @@ import { Bed, PawPrint, UtensilsCrossed, Sofa } from "lucide-react";
 const BrooklynHome = () => {
   return (
     <Layout>
-      <LocationSubNav
-        basePath="/locations/brooklyn"
-        cityName="Brooklyn, NY"
-        switchTo={{ label: "Portland, OR", path: "/locations/portland" }}
-      />
 
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center">
