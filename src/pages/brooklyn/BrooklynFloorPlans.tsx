@@ -86,24 +86,9 @@ const oneBrMedia = [
 
 const floorPlans = [
   {
-    id: 1, name: "Studio", sqft: "450-550", beds: 0, baths: 1, price: "$1,055",
+    id: 1, name: "Studio", sqft: "450-550", beds: 0, baths: 1, price: "$1,450",
     image: studioImage, features: ["Modern kitchen", "Extra storage", "In-unit washer/dryer"],
     hasCarousel: true, mediaType: "studio",
-  },
-  {
-    id: 2, name: "One Bedroom", sqft: "650-750", beds: 1, baths: 1, price: "$1,175",
-    image: oneBrImage, features: ["Modern kitchen", "In-unit washer/dryer", "City views"],
-    hasCarousel: true, mediaType: "oneBr",
-  },
-  {
-    id: 3, name: "Two Bedroom", sqft: "900-1,100", beds: 2, baths: 1, price: "$1,355",
-    image: twoBrImage, features: ["Modern kitchen", "In-unit washer/dryer", "Extra storage"],
-    hasCarousel: true, mediaType: "twoBr",
-  },
-  {
-    id: 4, name: "Three Bedroom", sqft: "1,200-1,400", beds: 3, baths: 1, price: "$2,060",
-    image: studioNew2, features: ["Modern kitchen", "In-unit washer/dryer", "Extra storage"],
-    hasCarousel: true, mediaType: "threeBr",
   },
 ];
 
