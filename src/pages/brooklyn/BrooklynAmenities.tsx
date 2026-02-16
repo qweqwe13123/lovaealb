@@ -2,11 +2,11 @@ import Layout from "@/components/Layout";
 import {
   Car, Dog, Snowflake, WashingMachine, Home, Warehouse, Wifi, Shield, Trees, Waves, Gamepad2, Baby
 } from "lucide-react";
-import parkingImage from "@/assets/amenity-parking.png";
+import parkingImage from "@/assets/bk-parking.jpg";
 import petsImage from "@/assets/amenity-pets.jpg";
-import forestImage from "@/assets/amenity-forest.jpg";
-import poolImage from "@/assets/amenity-pool.jpg";
-import tennisImage from "@/assets/amenity-tennis.jpg";
+import natureImage from "@/assets/bk-nature.jpg";
+import zooImage from "@/assets/bk-zoo.jpg";
+import museumImage from "@/assets/bk-museum.jpg";
 import playgroundImage from "@/assets/amenity-playground.png";
 
 const communityAmenities = [
