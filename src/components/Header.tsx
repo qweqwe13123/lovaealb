@@ -7,10 +7,15 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isLocationsHub = location.pathname === "/locations";
   const isBrooklyn = location.pathname.startsWith("/locations/brooklyn");
 
   // When on Brooklyn pages, nav links point to Brooklyn sub-routes
-  const navItems = isBrooklyn
+  const navItems = isLocationsHub
+    ? [
+        { label: "Locations", path: "/locations" },
+      ]
+    : isBrooklyn
     ? [
         { label: "Home", path: "/locations/brooklyn" },
         { label: "Floor Plans", path: "/locations/brooklyn/floor-plans" },
