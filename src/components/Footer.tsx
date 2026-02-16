@@ -4,7 +4,6 @@ import { Phone, Mail, MapPin } from "lucide-react";
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const isLocationsHub = location.pathname === "/locations";
   const isBrooklyn = location.pathname.startsWith("/locations/brooklyn");
 
   const basePath = isBrooklyn ? "/locations/brooklyn" : "";
@@ -14,15 +13,11 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
-  const address = isLocationsHub
-    ? "Multiple Locations"
-    : isBrooklyn
+  const address = isBrooklyn
     ? "2 Crown St, Brooklyn, NY 11225, USA"
     : "5855 SE 72ND AVENUE, Portland, OR 97206";
 
-  const description = isLocationsHub
-    ? "Experience comfortable living in our welcoming apartment communities."
-    : isBrooklyn
+  const description = isBrooklyn
     ? "Experience comfortable living in Brooklyn's most welcoming apartment community."
     : "Experience comfortable living in Portland's most welcoming apartment community.";
 
