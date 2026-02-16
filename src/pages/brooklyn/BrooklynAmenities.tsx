@@ -2,11 +2,11 @@ import Layout from "@/components/Layout";
 import {
   Car, Dog, Snowflake, WashingMachine, Home, Warehouse, Wifi, Shield, Trees, Waves, Gamepad2, Baby
 } from "lucide-react";
-import parkingImage from "@/assets/amenity-parking.png";
+import parkingImage from "@/assets/bk-parking.jpg";
 import petsImage from "@/assets/amenity-pets.jpg";
-import forestImage from "@/assets/amenity-forest.jpg";
-import poolImage from "@/assets/amenity-pool.jpg";
-import tennisImage from "@/assets/amenity-tennis.jpg";
+import natureImage from "@/assets/bk-nature.jpg";
+import zooImage from "@/assets/bk-zoo.jpg";
+import museumImage from "@/assets/bk-museum.jpg";
 import playgroundImage from "@/assets/amenity-playground.png";
 
 const communityAmenities = [
@@ -27,9 +27,9 @@ const apartmentFeatures = [
 const ourSpaces = [
   { image: parkingImage, icon: Car, label: "Convenient", title: "Parking", description: "Street parking available for residents" },
   { image: petsImage, icon: Dog, label: "Welcome Pets", title: "Pet-Friendly Living", description: "A welcoming space for residents and their furry friends" },
-  { image: forestImage, icon: Trees, label: "Peaceful Oasis", title: "Nature at Your Doorstep", description: "Prospect Park and green spaces just steps away" },
-  { image: poolImage, icon: Waves, label: "Prospect Park", title: "Park Swimming Pool", description: "Located within Prospect Park" },
-  { image: tennisImage, icon: Gamepad2, label: "Prospect Park", title: "Tennis Court", description: "Located within Prospect Park" },
+  { image: natureImage, icon: Trees, label: "Peaceful Oasis", title: "Nature at Your Doorstep", description: "Prospect Park and green spaces just steps away" },
+  { image: zooImage, icon: Waves, label: "Prospect Park", title: "Zoo", description: "Located within Prospect Park" },
+  { image: museumImage, icon: Gamepad2, label: "Prospect Park", title: "Museum", description: "Located within Prospect Park" },
   { image: playgroundImage, icon: Baby, label: "Prospect Park", title: "Playground", description: "Located within Prospect Park" },
 ];
 
@@ -131,7 +131,7 @@ const BrooklynAmenities = () => {
               <div className="relative grid grid-cols-2 gap-4">
                 <div className="space-y-4">
                   <div className="h-48 rounded-2xl overflow-hidden"><img src={petsImage} alt="Pet friendly living" className="w-full h-full object-cover" /></div>
-                  <div className="h-64 rounded-2xl overflow-hidden"><img src={forestImage} alt="Nature views" className="w-full h-full object-cover" /></div>
+                  <div className="h-64 rounded-2xl overflow-hidden"><img src={natureImage} alt="Nature views" className="w-full h-full object-cover" /></div>
                 </div>
                 <div className="space-y-4 pt-8">
                   <div className="h-64 rounded-2xl overflow-hidden"><img src={parkingImage} alt="Street parking" className="w-full h-full object-cover" /></div>
