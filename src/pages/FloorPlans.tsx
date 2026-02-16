@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -89,6 +90,7 @@ const floorPlans = [
     features: ["Modern kitchen", "Extra storage", "In-unit washer/dryer"],
     hasCarousel: true,
     mediaType: "studio",
+    sold: true,
   },
   {
     id: 2,
@@ -205,7 +207,12 @@ const FloorPlans = () => {
             {floorPlans.map((plan) => {
               const mediaData = getMediaArray(plan.mediaType);
               return (
-                <Card key={plan.id} className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Card key={plan.id} className={`overflow-hidden hover:shadow-xl transition-shadow duration-300 relative ${(plan as any).sold ? 'opacity-75' : ''}`}>
+                  {(plan as any).sold && (
+                    <div className="absolute top-3 right-3 z-10">
+                      <Badge variant="destructive" className="text-sm px-3 py-1">Sold</Badge>
+                    </div>
+                  )}
                   {plan.hasCarousel && mediaData ? (
                     <div className="relative h-56 cursor-pointer" onClick={() => openLightbox(mediaData.media, mediaData.index)}>
                       {mediaData.media[mediaData.index].type === "video" ? (
@@ -279,11 +286,13 @@ const FloorPlans = () => {
                     </ul>
                   </CardContent>
                   <CardFooter>
-                    <Link to="/apply" className="w-full">
-                      <Button className="w-full bg-primary hover:bg-greenland-green-dark">
-                        Apply Now
-                      </Button>
-                    </Link>
+                    {(plan as any).sold ? (
+                      <Button className="w-full" variant="secondary" disabled>Sold</Button>
+                    ) : (
+                      <Link to="/apply" className="w-full">
+                        <Button className="w-full bg-primary hover:bg-greenland-green-dark">Apply Now</Button>
+                      </Link>
+                    )}
                   </CardFooter>
                 </Card>
               );
