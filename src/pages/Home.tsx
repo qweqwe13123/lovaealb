@@ -25,7 +25,7 @@ const Home = () => {
           <div className="bg-primary rounded-3xl overflow-hidden shadow-2xl">
             <div className="px-8 py-12 md:px-12 md:py-16 text-center">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-primary-foreground mb-6 leading-tight">
-                Experience Cozy Living in Oregon
+                Experience Cozy Living at Greenland
               </h1>
               <p className="text-base md:text-lg text-primary-foreground/90 mb-10 leading-relaxed">
                 At Greenland, residents enjoy a warm and inviting community with beautifully designed apartments, perfect for students, families, and seniors alike!
@@ -50,7 +50,7 @@ const Home = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">
-            Greenland — Apartments in Oregon
+            Greenland — Apartments for Rent
           </h2>
           <p className="max-w-4xl mx-auto text-lg leading-relaxed text-primary-foreground/90">
             Discover Greenland, a welcoming apartment community designed for comfortable everyday living. Our thoughtfully designed, pet-friendly apartments offer a warm and inviting place to call home for professionals, students, families, seniors, and everyone in between. With a focus on comfort, convenience, and a sense of community, Greenland is a place where you can truly feel at home.
