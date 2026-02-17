@@ -8,9 +8,14 @@ const Header = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isBrooklyn = location.pathname.startsWith("/locations/brooklyn");
+  const isLocationsHub = location.pathname === "/locations";
 
-  // When on Brooklyn pages, nav links point to Brooklyn sub-routes
-  const navItems = isBrooklyn
+  // When on the Locations hub, show a neutral header with just Locations highlighted
+  const navItems = isLocationsHub
+    ? [
+        { label: "Locations", path: "/locations" },
+      ]
+    : isBrooklyn
     ? [
         { label: "Home", path: "/locations/brooklyn" },
         { label: "Floor Plans", path: "/locations/brooklyn/floor-plans" },
@@ -28,7 +33,7 @@ const Header = () => {
         { label: "Locations", path: "/locations" },
       ];
 
-  const applyPath = isBrooklyn ? "/locations/brooklyn/floor-plans" : "/floor-plans";
+  const applyPath = isLocationsHub ? "/locations" : isBrooklyn ? "/locations/brooklyn/floor-plans" : "/floor-plans";
 
   return (
     <>
@@ -74,13 +79,15 @@ const Header = () => {
           </nav>
 
           {/* Apply Now Button */}
-          <div className="hidden lg:block">
-            <Link to={applyPath}>
-              <Button className="bg-[#1e3a5f] text-white hover:bg-[#15293f] border-none">
-                Apply Now
-              </Button>
-            </Link>
-          </div>
+          {!isLocationsHub && (
+            <div className="hidden lg:block">
+              <Link to={applyPath}>
+                <Button className="bg-[#1e3a5f] text-white hover:bg-[#15293f] border-none">
+                  Apply Now
+                </Button>
+              </Link>
+            </div>
+          )}
 
           {/* Mobile Menu Button */}
           <button
