@@ -87,7 +87,7 @@ const handler = async (req: Request): Promise<Response> => {
                       <span style="font-size: 32px;">🏠</span>
                     </div>
                     <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: 0.5px;">
-                      Greenland Oregon
+                      Greenland Group
                     </h1>
                     <p style="margin: 8px 0 0; color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 400;">
                       Premium Apartment Living
@@ -127,7 +127,7 @@ const handler = async (req: Request): Promise<Response> => {
                     </p>
                     
                     <p style="margin: 0 0 25px; color: #555555; font-size: 15px; line-height: 1.8;">
-                      Thank you for submitting your rental application with <strong>Greenland Oregon</strong>. 
+                      Thank you for submitting your rental application with <strong>Greenland Group</strong>. 
                       We have successfully received your application and payment. Our team will begin reviewing 
                       your information shortly.
                     </p>
@@ -194,12 +194,12 @@ const handler = async (req: Request): Promise<Response> => {
                     </table>
 
                     <p style="margin: 25px 0 0; color: #555555; font-size: 15px; line-height: 1.8;">
-                      Thank you for choosing Greenland Oregon. We look forward to welcoming you to our community!
+                      Thank you for choosing Greenland Group. We look forward to welcoming you to our community!
                     </p>
 
                     <p style="margin: 25px 0 0; color: #333333; font-size: 15px;">
                       Warm regards,<br>
-                      <strong style="color: #1a4d1a;">The Greenland Oregon Team</strong>
+                      <strong style="color: #1a4d1a;">The Greenland Group Team</strong>
                     </p>
                   </td>
                 </tr>
@@ -243,10 +243,10 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td align="center">
                     <p style="margin: 0 0 8px; color: #ffffff; font-size: 16px; font-weight: 600;">
-                      Greenland Oregon
+                      Greenland Group
                     </p>
                     <p style="margin: 0 0 15px; color: rgba(255,255,255,0.7); font-size: 13px;">
-                      Premium Apartment Living in Oregon
+                      Premium Apartment Living
                     </p>
                     <p style="margin: 0; color: rgba(255,255,255,0.5); font-size: 12px;">
                       © ${new Date().getFullYear()} Greenland Group. All rights reserved.
@@ -266,7 +266,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email via Resend
     const emailResponse = await resend.emails.send({
-      from: "Greenland Oregon <noreply@greenlandoregon.com>",
+      from: "Greenland Group <noreply@mygreenlandapartments.com>",
       to: [to],
       subject: `Application Confirmed - ${confirmationNumber}`,
       html: emailHtml,
