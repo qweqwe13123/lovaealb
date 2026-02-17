@@ -40,7 +40,7 @@ const Home = () => {
             </div>
             {/* White Footer Strip */}
             <div className="bg-white/90 py-4 text-center">
-              <span className="text-muted-foreground text-sm tracking-wide">greenlandoregon.com</span>
+              <span className="text-muted-foreground text-sm tracking-wide">mygreenlandapartments.com</span>
             </div>
           </div>
         </div>
