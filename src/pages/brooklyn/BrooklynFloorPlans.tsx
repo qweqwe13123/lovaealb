@@ -181,7 +181,7 @@ const BrooklynFloorPlans = () => {
                       </ul>
                     </CardContent>
                     <CardFooter>
-                      <Link to="/apply" className="w-full">
+                      <Link to="/locations/brooklyn/apply" className="w-full">
                         <Button className="w-full bg-primary hover:bg-greenland-green-dark">Apply Now</Button>
                       </Link>
                     </CardFooter>

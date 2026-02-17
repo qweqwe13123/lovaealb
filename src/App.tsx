@@ -42,6 +42,8 @@ const App = () => (
           <Route path="/locations/brooklyn/amenities" element={<BrooklynAmenities />} />
           <Route path="/locations/brooklyn/neighborhood" element={<BrooklynNeighborhood />} />
           <Route path="/locations/brooklyn/contact" element={<BrooklynContact />} />
+          <Route path="/locations/brooklyn/apply" element={<Apply />} />
+          <Route path="/locations/brooklyn/application-success" element={<ApplicationSuccess />} />
           <Route path="/apply" element={<Apply />} />
           <Route path="/application-success" element={<ApplicationSuccess />} />
           <Route path="/success" element={<ApplicationSuccess />} />
