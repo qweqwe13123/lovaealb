@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-import heroImage from "@/assets/hero-portland.jpg";
+import heroImage from "@/assets/hero-brooklyn.jpg";
 import modernLivingImage from "@/assets/modern-living.png";
 import petFriendlyImage from "@/assets/pet-friendly.jpg";
 import { Bed, PawPrint, UtensilsCrossed, Sofa } from "lucide-react";
