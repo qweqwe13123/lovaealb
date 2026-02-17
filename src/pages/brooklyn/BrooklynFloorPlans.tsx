@@ -86,7 +86,7 @@ const oneBrMedia = [
 
 const floorPlans = [
   {
-    id: 1, name: "Studio", sqft: "450-550", beds: 0, baths: 1, price: "$1,450",
+    id: 1, name: "Studio", sqft: "450-600", beds: 0, baths: 1, price: "$1,450",
     image: studioImage, features: ["Modern kitchen", "Extra storage", "In-unit washer/dryer"],
     hasCarousel: true, mediaType: "studio",
   },
