@@ -52,7 +52,7 @@ const ApplicationSuccess = () => {
             setVerified(true);
             setDetails({
               confirmationNumber:
-                data.confirmationNumber || `APP-${new Date().getFullYear()}-XXXXXX`,
+                data.confirmationNumber || "XXXX-XXXX",
               firstName: data.firstName || "",
               lastName: data.lastName || "",
               email: data.email || "",
