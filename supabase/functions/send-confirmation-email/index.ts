@@ -84,13 +84,13 @@ const handler = async (req: Request): Promise<Response> => {
                 <tr>
                   <td align="center">
                     <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.15); border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                      <span style="font-size: 32px;">🏠</span>
+                      <span style="font-size: 32px; color: #ffffff; font-weight: 700; font-family: Georgia, 'Times New Roman', serif;">G</span>
                     </div>
                     <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: 0.5px;">
                       Greenland Group
                     </h1>
                     <p style="margin: 8px 0 0; color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 400;">
-                      Premium Apartment Living
+                      Cozy Apartment Living
                     </p>
                   </td>
                 </tr>
@@ -167,7 +167,7 @@ const handler = async (req: Request): Promise<Response> => {
                                     </td>
                                     <td style="vertical-align: top; padding-left: 12px;">
                                       <p style="margin: 0; color: #333333; font-size: 15px; font-weight: 600;">Application Review</p>
-                                      <p style="margin: 5px 0 0; color: #666666; font-size: 14px; line-height: 1.5;">Our team will carefully review your application within 1-3 business days.</p>
+                                      <p style="margin: 5px 0 0; color: #666666; font-size: 14px; line-height: 1.5;">Our team will carefully review your application within 1-5 business days.</p>
                                     </td>
                                   </tr>
                                 </table>
@@ -246,10 +246,10 @@ const handler = async (req: Request): Promise<Response> => {
                       Greenland Group
                     </p>
                     <p style="margin: 0 0 15px; color: rgba(255,255,255,0.7); font-size: 13px;">
-                      Premium Apartment Living
+                      Cozy Apartment Living
                     </p>
                     <p style="margin: 0; color: rgba(255,255,255,0.5); font-size: 12px;">
-                      © ${new Date().getFullYear()} Greenland Group. All rights reserved.
+                      © 2024 Greenland Group. All rights reserved.
                     </p>
                   </td>
                 </tr>
