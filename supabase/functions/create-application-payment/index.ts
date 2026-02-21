@@ -241,7 +241,7 @@ serve(async (req) => {
     const requestOrigin = req.headers.get("origin");
     const baseUrl = requestOrigin && requestOrigin.startsWith("http")
       ? requestOrigin
-      : "https://www.greenlandoregon.com";
+      : "https://www.mygreenlandapartments.com";
 
     const successUrl = `${baseUrl}/success?application_id=${application.id}`;
     const cancelUrl = `${baseUrl}/apply?canceled=true`;
