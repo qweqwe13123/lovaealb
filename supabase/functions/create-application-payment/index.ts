@@ -40,9 +40,9 @@ serve(async (req) => {
       name: `${applicationData.firstName} ${applicationData.lastName}`
     });
 
-    // Initialize Supabase
-    const supabaseUrl = Deno.env.get("SUPABASE_URL");
-    const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+    // Initialize Supabase - use external Supabase if configured, otherwise fallback to Lovable Cloud
+    const supabaseUrl = Deno.env.get("EXTERNAL_SUPABASE_URL") || Deno.env.get("SUPABASE_URL");
+    const supabaseServiceKey = Deno.env.get("EXTERNAL_SUPABASE_SERVICE_ROLE_KEY") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
     
     if (!supabaseUrl || !supabaseServiceKey) {
       throw new Error("Database configuration missing - contact administrator");
