@@ -38,12 +38,14 @@ serve(async (req) => {
 
   logStep("PRODUCTION: Webhook received");
 
-  // Get environment variables - use external Supabase if configured
+  // Get environment variables - use external Supabase for data, Lovable Cloud for edge functions
   const stripeSecretKey = Deno.env.get("STRIPE_SECRET_KEY");
   const webhookSecret = Deno.env.get("STRIPE_WEBHOOK_SECRET");
   const supabaseUrl = Deno.env.get("EXTERNAL_SUPABASE_URL") || Deno.env.get("SUPABASE_URL");
   const supabaseServiceKey = Deno.env.get("EXTERNAL_SUPABASE_SERVICE_ROLE_KEY") || Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY");
+  // Always use Lovable Cloud URL for calling other edge functions (email)
+  const lovableCloudUrl = Deno.env.get("SUPABASE_URL");
 
   // Validate configuration
   if (!stripeSecretKey) {
@@ -168,7 +170,7 @@ serve(async (req) => {
 
         try {
           const emailResponse = await fetch(
-            `${supabaseUrl}/functions/v1/send-confirmation-email`,
+            `${lovableCloudUrl}/functions/v1/send-confirmation-email`,
             {
               method: "POST",
               headers: {
