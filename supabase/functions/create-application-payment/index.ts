@@ -50,6 +50,15 @@ serve(async (req) => {
 
     const supabaseClient = createClient(supabaseUrl, supabaseServiceKey);
 
+    // Generate confirmation number in XXXX-XXXX format (hex)
+    const chars = 'ABCDEF0123456789';
+    let part1 = '', part2 = '';
+    for (let i = 0; i < 4; i++) {
+      part1 += chars[Math.floor(Math.random() * chars.length)];
+      part2 += chars[Math.floor(Math.random() * chars.length)];
+    }
+    const confirmationNumber = `${part1}-${part2}`;
+
     // Calculate fees (PRODUCTION pricing)
     const adultsCount = applicationData.adultsCount || 1;
     const petsCount = applicationData.petsCount || 0;
@@ -63,6 +72,7 @@ serve(async (req) => {
     const { data: application, error: insertError } = await supabaseClient
       .from("rental_applications")
       .insert({
+        confirmation_number: confirmationNumber,
         // Personal Info
         first_name: applicationData.firstName,
         last_name: applicationData.lastName,
